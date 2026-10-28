@@ -179,6 +179,133 @@ FidelityFX, NVIDIA DLSS and Intel XeSS for the upscalers, MinHook in the DLSS 5 
 Noto fonts for the added languages, and LibOrbisPkg in the installer. Their notices ship in `licenses/` next to the
 executable.
 
+## Installation Guide
+
+### Prerequisites
+
+Before installing P.T. PC Port, ensure you have:
+
+- **Operating System:** Windows 10/11 (64-bit) or Linux x86-64 with glibc 2.38+
+- **Graphics:** A GPU and driver supporting Vulkan 1.3
+- **Game Files:** Your own compatible P.T. PS4 game dump (CUSA01127 recommended), either as an extracted folder or an unencrypted fake PKG
+- **Storage:** Sufficient free disk space for the installation and extracted game assets
+
+> **Note:** The installer does not include the original P.T. game assets. You must provide your own compatible game files. Encrypted PS4 store PKGs are not supported.
+
+### Step 1: Prepare the P.T. Game Files
+
+Obtain your game dump from your own PS4 installation.
+
+The installer accepts either:
+
+- An extracted game dump folder
+- A compatible fake PKG (`.pkg`) created from the dump
+
+The US release (`CUSA01127`) is the recommended version.
+
+Save the game files somewhere accessible, such as your Downloads folder or Desktop.
+
+### Step 2: Download the Installer
+
+1. Visit the official [P.T. PC Port GitHub Releases](https://github.com/LoreanXavier/pt-pc/releases/latest).
+2. Expand the **Assets** section.
+3. Download the installer for your operating system:
+
+   | Operating System | Installer |
+   |---|---|
+   | Windows | `P.T.PC.Port.Setup.exe` |
+   | Linux | `P.T.PC.Port.Setup-linux` |
+
+4. Save the downloaded installer somewhere convenient.
+
+### Step 3: Run the Installer
+
+#### Windows
+
+1. Double-click `P.T.PC.Port.Setup.exe`.
+2. Select your extracted P.T. game folder or compatible `.pkg` file.
+3. Choose the installation directory.
+4. Optionally enable **Create Desktop Shortcut**.
+5. Click **Install**.
+
+#### Linux
+
+Open a terminal in the directory containing the downloaded installer.
+
+Make the installer executable:
+
+```bash
+chmod +x P.T.PC.Port.Setup-linux
+```
+
+Run the installer:
+
+```bash
+./P.T.PC.Port.Setup-linux
+```
+
+Once the installer opens:
+
+1. Select your extracted P.T. game folder or compatible `.pkg` file.
+2. Choose the installation directory.
+3. Configure any available shortcut options.
+4. Start the installation.
+
+### Step 4: Launch the Game
+
+After installation:
+
+**Windows**
+- Double-click the P.T. PC Port desktop shortcut, if created.
+- Alternatively, launch the game from its installation directory.
+
+**Linux**
+- Open the installation directory.
+- Run the `pt` executable:
+
+```bash
+./pt
+```
+
+The game should now launch using the installed game assets.
+
+### Updating the Game
+
+To install future updates:
+
+1. Download the latest installer from [GitHub Releases](https://github.com/LoreanXavier/pt-pc/releases/latest).
+2. Run it and select your existing installation directory.
+
+Alternatively, use the game's built-in update functionality.
+
+Existing game assets, settings, saves, and mods are preserved during supported updates.
+
+### Troubleshooting
+
+**Installer does not accept the PKG**
+- Ensure you are using a compatible unencrypted fake PKG or extracted game dump.
+- Encrypted PS4 store PKGs are not supported.
+
+**Linux installer does not launch**
+- Verify executable permissions using `chmod +x`.
+- Run the installer from a terminal to inspect error messages.
+- Ensure your system meets the glibc 2.38+ requirement.
+
+**Game fails to launch**
+- Update your GPU drivers.
+- Verify that your graphics hardware supports Vulkan 1.3.
+- Ensure the required game assets were extracted successfully.
+
+For additional help, visit the [official P.T. PC Port Discord](https://discord.gg/3vKwUf2eTb).
+
+### Credits
+
+Developed by [LoreanXavier](https://github.com/LoreanXavier).
+
+Original repository: https://github.com/LoreanXavier/pt-pc
+
+This community-made port is not affiliated with or endorsed by Konami or Kojima Productions.
+
 ## License
 
 The port's own code is under the MIT license (see LICENSE). The third-party pieces listed above keep their own
